@@ -1,0 +1,11 @@
+[Unit]
+Description=run roundgis share services
+After=network.target
+
+[Service]
+LimitNOFILE=20000
+ExecStart=/usr/bin/python3 /home/pi/rg_share/run.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
